@@ -6,14 +6,14 @@ const path = require('path')
 
 
 const root = require('./routes/routes')
-const  = require('./routes/jokes')
+const  jokes = require('./routes/jokes')
 
 const server = express()
 server.use(express.json())
 server.use(express.static(path.join(__dirname, './public')))
 
 
-server.use('/api/setup', setup)
-server.use('/api/punchline', punchline)
+server.use('/api/jokes', jokes)
+
 
 module.exports = server

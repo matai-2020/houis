@@ -6,7 +6,7 @@ const jokesURL = 'https://official-joke-api.appspot.com/random_joke'
 
 router.get('/setup', (req, res) => {
   request.get(jokesURL)
-    .then(response => {
+    .then(response => {  
       const { joke } = response.body
       res.json(response.body.setup)
     })
