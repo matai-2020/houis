@@ -1,8 +1,17 @@
 import React from 'react'
+import { HashRouter as Router, Route } from 'react-router-dom'
+
+import Home from './Home'
+import Joke from './Joke'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <>
+      <Router>
+        <Route exact path="/" component={Home} />
+        <Route path="/joke" component={Joke} />
+      </Router>
+    </>
   )
 }
 
