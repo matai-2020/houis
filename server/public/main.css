@@ -1,4 +1,22 @@
 body {
-  background-color: bisque;
+  background-color: rgb(255, 255, 93);
+}
+
+.home {
+  margin-top: 200px;
+  margin-left: 50%;
+  transform: translate(-25%);
+}
+
+.joke {
+  width: 100px;
+}
+
+.middle-text {
+  margin-left: 60px;
+}
+
+.go-sign {
+  margin-left: 150px;
 }
 

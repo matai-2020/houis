@@ -4,14 +4,19 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <>
-      <div><h1>JOKE</h1></div>
-      <div><h1>on-the</h1></div>
-      <Link to="/joke">
-        <div>
-          <img src="" alt="Go Sign" />
+      <div className="home">
+        <div className="joke">
+          <img src="/logo.png" />
         </div>
-      </Link>
-
+        <div className="middle-text">
+          <img src="/middletext.png" />
+        </div>
+        <Link to="/joke">
+          <div className="go-sign">
+            <img src="/go-sign.png" alt="Go Sign" />
+          </div>
+        </Link>
+      </div>
     </>
   )
 }
