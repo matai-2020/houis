@@ -4,19 +4,20 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <>
-      <div className="home">
-        <div className="joke">
-          <img src="/logo.png" />
-        </div>
-        <div className="middle-text">
-          <img src="/middletext.png" />
-        </div>
+    <div className="row">
+      <div className="col-4"></div>
+
+      <div className="col-4 home">
+        <p><img className="joke" src="/logo.png" /></p>
+        <p><img className="middle-text" src="/middletext.png" /></p>
         <Link to="/joke">
-          <div className="go-sign">
-            <img src="/go-sign.png" alt="Go Sign" />
-          </div>
+          <img className="go-sign" src="/go-sign.png" alt="Go Sign" />
         </Link>
       </div>
+
+      <div className="col-4"></div>
+
+    </div>
     </>
   )
 }

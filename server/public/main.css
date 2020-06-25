@@ -2,21 +2,52 @@ body {
   background-color: rgb(255, 255, 93);
 }
 
-.home {
-  margin-top: 200px;
-  margin-left: 50%;
-  transform: translate(-25%);
-}
 
-.joke {
-  width: 100px;
+
+.joke { 
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .middle-text {
-  margin-left: 60px;
+  max-width: 300px;
+  margin-left: 80px;
 }
 
 .go-sign {
-  margin-left: 150px;
+  max-width: 200px;
+  margin-left: 120px;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.row {
+  width: 100%;
+  display: flex;
+}.col-1 {
+  width: 8.33%;
+}.col-2 {
+  width: 16.66%;
+}.col-3 {
+  width: 25%;
+}.col-4 {
+  width: 33.33%;
+}.col-5 {
+  width: 41.66%;
+}.col-6 {
+  width: 50%;
+}.col-7 {
+  width: 58.33%;
+}.col-8 {
+  width: 66.66%;
+}.col-9 {
+  width: 75%;
+}.col-10 {
+  width: 83.33%;
+}.col-11 {
+  width: 91.66%;
+}
