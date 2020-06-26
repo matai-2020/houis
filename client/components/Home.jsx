@@ -8,7 +8,7 @@ const Home = () => {
       <div className="col-4"></div>
 
       <div className="col-4 home">
-        <p><img className="joke" src="/logo.png" /></p>
+        <p><img className="joke" src="/logo-new.png" /></p>
         <p><img className="middle-text" src="/middletext.png" /></p>
         <Link to="/joke">
           <img className="go-sign" src="/go-sign.png" alt="Go Sign" />
