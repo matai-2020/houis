@@ -5,13 +5,13 @@ export default class Joke extends React.Component {
     super(props)
 
     this.state = {
-      setup: `What's the best thing about a Boolean`,
-      punchline: `Even if you're wrong, you're only off by a bit.`
+      setup: ``,
+      punchline: ``
     }
   }
 
   randomiseJoke () {
-    // Math.Random()
+    // call api -> get route server
     // setState
   }
 
