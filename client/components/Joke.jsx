@@ -20,7 +20,6 @@ class Joke extends React.Component {
     }
 
     componentDidMount () {
-      
       this.handler()
     }
 
