@@ -7,7 +7,7 @@ const jokesURL = 'https://official-joke-api.appspot.com/random_joke'
 router.get('/', (req, res) => {
   request.get(jokesURL)
     .then(response => {
-        res.json(response.body)
+      res.json(response.body)
     })
     .catch(err => {
       res.status(500).send('ERROR:' + err.message)
