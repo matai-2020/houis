@@ -2,7 +2,9 @@ body {
   background-color: rgb(255, 255, 93);
 }
 
-
+.container {
+  margin-top: 100px;
+}
 
 .joke { 
   max-width: 400px;
@@ -20,12 +22,27 @@ body {
   margin-left: 120px;
 }
 
+
+footer {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;  
+}
+
+footer span {
+  font-style: italic;
+}
+
+
 .go-sign:hover {
   animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
 
 * {
   -webkit-box-sizing: border-box;
