@@ -10,12 +10,16 @@ class Joke extends React.Component {
       punchline: ''
     }
 
-    componentDidMount () {
+    handler () {
       request.get(jokesURL)
         .then(res => {
           const { setup, punchline } = res.body
           this.setState({ setup, punchline })
         })
+    }
+
+    componentDidMount () {
+      this.handler()
     }
 
     render () {
@@ -25,7 +29,7 @@ class Joke extends React.Component {
             <div className="setup">{this.state.setup}</div>
             <div className="punchline">{this.state.punchline}</div>
           </div>
-          <Link to="/">
+          <Link onClick={() => this.handler()}>
             <img className="go-again-sign" src="/go-again.png" alt="Go Again Sign" />
           </Link>
         </div>
