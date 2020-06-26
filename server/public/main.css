@@ -2,7 +2,9 @@ body {
   background-color: rgb(255, 255, 93);
 }
 
-
+.container {
+  margin-top: 100px;
+}
 
 .joke { 
   max-width: 400px;
@@ -19,6 +21,19 @@ body {
   max-width: 200px;
   margin-left: 120px;
 }
+
+footer {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;  
+}
+
+footer span {
+  font-style: italic;
+}
+
 
 * {
   -webkit-box-sizing: border-box;

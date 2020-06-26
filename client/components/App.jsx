@@ -11,6 +11,9 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route path="/joke" component={Joke} />
       </Router>
+      <footer>
+        Brought to you by: <span>Team Houis</span>™
+      </footer>
     </>
   )
 }
