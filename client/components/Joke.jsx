@@ -1,5 +1,6 @@
 import React from 'react'
 import request from 'superagent'
+import { Link } from 'react-router-dom'
 
 const jokesURL = 'https://official-joke-api.appspot.com/random_joke'
 
@@ -19,11 +20,15 @@ class Joke extends React.Component {
 
     render () {
       return (
-      <>
-        <div className="setup">{this.state.setup}</div>
-        <div className="punchline">{this.state.punchline}</div>
-        {/* <button onClick={this.randomiseJoke}>New Joke</button> */}
-      </>
+        <div className="container">
+          <div className="body-text">
+            <div className="setup">{this.state.setup}</div>
+            <div className="punchline">{this.state.punchline}</div>
+          </div>
+          <Link to="/">
+            <img className="go-again-sign" src="/go-again.png" alt="Go Again Sign" />
+          </Link>
+        </div>
       )
     }
 }
