@@ -4,24 +4,47 @@ body {
 
 .container {
   margin-top: 100px;
+  text-align: center;
 }
 
 .joke { 
   max-width: 400px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 30px;
 }
 
 .middle-text {
   max-width: 300px;
-  margin-left: 80px;
+  margin-left: auto;
 }
 
 .go-sign {
   max-width: 200px;
-  margin-left: 120px;
+  margin-left: auto;
 }
 
+.go-again-sign {
+  max-width: 400px;
+  margin-left: auto;
+}
+
+
+.body-text {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.body-text .setup {
+  display: inline-block;
+  font-size: 30pt; 
+  margin-bottom: 30px;
+}
+
+.body-text .punchline {
+  font-size: 50pt; 
+}
 
 footer {
   font-family: 'Quicksand', sans-serif;

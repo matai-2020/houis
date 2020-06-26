@@ -1,31 +1,36 @@
 import React from 'react'
+import request from 'superagent'
+import { Link } from 'react-router-dom'
 
-export default class Joke extends React.Component {
-  constructor (props) {
-    super(props)
+const jokesURL = 'https://official-joke-api.appspot.com/random_joke'
 
-    this.state = {
-      setup: ``,
-      punchline: ``
+class Joke extends React.Component {
+    state = {
+      setup: '',
+      punchline: ''
     }
-  }
 
-  randomiseJoke () {
-    // call api -> get route server
-    // setState
-  }
+    componentDidMount () {
+      request.get(jokesURL)
+        .then(res => {
+          const { setup, punchline } = res.body
+          this.setState({ setup, punchline })
+        })
+    }
 
-  componentDidMount () {
-    this.randomiseJoke()
-  }
-
-  render () {
-    return (
-      <>
-        <div className="setup">{this.state.setup}</div>
-        <div className="punchline">{this.state.punchline}</div>
-        <button onClick={this.randomiseJoke}>New Joke</button>
-      </>
-    )
-  }
+    render () {
+      return (
+        <div className="container">
+          <div className="body-text">
+            <div className="setup">{this.state.setup}</div>
+            <div className="punchline">{this.state.punchline}</div>
+          </div>
+          <Link to="/">
+            <img className="go-again-sign" src="/go-again.png" alt="Go Again Sign" />
+          </Link>
+        </div>
+      )
+    }
 }
+
+export default Joke
