@@ -7,18 +7,20 @@ const jokesURL = 'https://official-joke-api.appspot.com/random_joke'
 class Joke extends React.Component {
     state = {
       setup: '',
-      punchline: ''
+      punchline: '',
+      image: ''
     }
 
     handler () {
       request.get(jokesURL)
         .then(res => {
           const { setup, punchline } = res.body
-          this.setState({ setup, punchline })
+          this.setState({ setup, punchline, image: '/go-again.png' })
         })
     }
 
     componentDidMount () {
+      
       this.handler()
     }
 
@@ -30,7 +32,7 @@ class Joke extends React.Component {
             <div className="punchline">{this.state.punchline}</div>
           </div>
           <Link onClick={() => this.handler()}>
-            <img className="go-again-sign" src="/go-again.png" alt="Go Again Sign" />
+            <img className="go-again-sign" src={this.state.image} />
           </Link>
         </div>
       )
